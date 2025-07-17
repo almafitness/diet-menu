@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>本日のダイエットメニュー</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #fdf6f0;
+    }
+    h1 {
+      color: #d35400;
+    }
+    .menu {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍽 本日のダイエットメニュー 🍽</h1>
+  <div class="menu" id="menu"></div>
+
+  <script>
+    const menus = [
+      "朝：オートミールと豆乳バナナスムージー",
+      "昼：鶏むね肉とブロッコリーのサラダ",
+      "夜：豆腐とわかめの味噌汁＋玄米",
+      "朝：ゆで卵＋全粒パン＋ヨーグルト",
+      "昼：サバの塩焼き＋ひじきの煮物",
+      "夜：プロテインドリンク＋温野菜",
+      "朝：フルーツグラノーラ＋アーモンドミルク"
+    ];
+    const today = new Date().getDate();
+    const selected = menus[today % menus.length];
+    document.getElementById('menu').textContent = selected;
+  </script>
+</body>
+</html>
